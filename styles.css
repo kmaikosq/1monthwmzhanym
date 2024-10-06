@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.envelope {
+    width: 250px;
+    height: 150px;
+    background-color: #c2185b;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.5s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.envelope .flap {
+    width: 100%;
+    height: 60%;
+    background-color: #d81b60;
+    position: absolute;
+    top: 0;
+    transform-origin: top;
+    transition: transform 1s;
+    border-radius: 10px 10px 0 0;
+}
+
+.envelope .body {
+    width: 100%;
+    height: 100%;
+    background-color: #c2185b;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+}
+
+.envelope .seal {
+    width: 40px;
+    height: 40px;
+    background-color: #f06292;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.popup,
+.letter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-family: 'Great Vibes', cursive;
+    color: #c2185b;
+}
+
+.letter-content p {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5em;
+    line-height: 1.5;
+    color: #333;
+}
+
+.btn {
+    background-color: #c2185b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+.btn:hover {
+    background-color: #d81b60;
+}
+
+.btn.no {
+    background-color: #757575;
+    margin-left: 10px;
+}
+
+.btn.close {
+    margin-top: 20px;
+    background-color: #c2185b;
+}
