@@ -26,16 +26,9 @@ body {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Анимация появления экрана */
-.screen.active {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-}
-
+/* Элементы с классом hidden будут скрыты */
 .hidden {
-    opacity: 0;
-    transform: translate(-50%, -60%);
-    pointer-events: none;
+    display: none;
 }
 
 /* Сердечки */
