@@ -1,0 +1,125 @@
+/* Основные стили */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Центрирование экрана */
+.screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Анимация появления экрана */
+.screen.active {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+    pointer-events: none;
+}
+
+/* Сердечки */
+.hearts {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.pixel-heart {
+    width: 30px;
+    height: 30px;
+    animation: heart-beat 1.5s infinite alternate;
+}
+
+/* Ключевые кадры для анимации сердечек */
+@keyframes heart-beat {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Стили кнопок */
+.start-button, .menu-button, .back-button {
+    background-color: #FF6347;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+/* Письмо */
+.message-container {
+    background-image: url('paper.png');
+    background-size: cover;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 300px;
+    margin: 0 auto;
+    color: #111;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Полароидный стиль для плеера */
+.polaroid-player {
+    display: inline-block;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cover-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.audio-controls {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.control-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Zhanym</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Главный экран -->
+    <div id="main-screen" class="screen centered">
+        <div class="hearts">
+            <img src="heart.png" alt="Heart" class="pixel-heart">
+            <img src="heart.png" alt="Heart" class="pixel-heart">
+            <img src="heart.png" alt="Heart" class="pixel-heart">
+            <img src="heart.png" alt="Heart" class="pixel-heart">
+            <img src="heart.png" alt="Heart" class="pixel-heart">
+        </div>
+        <h1>dear zhanym, this is for you</h1>
+        <button class="start-button" onclick="goToScreen('menu-screen')">Start</button>
+    </div>
+
+    <!-- Экран меню -->
+    <div id="menu-screen" class="screen hidden centered">
+        <h2>Menu</h2>
+        <button class="menu-button" onclick="goToScreen('journey-screen')">Journey</button>
+        <button class="menu-button" onclick="goToScreen('moment-screen')">Moment</button>
+        <button class="menu-button" onclick="goToScreen('message-screen')">Message</button>
+        <button class="menu-button" onclick="goToScreen('playlist-screen')">Playlist</button>
+    </div>
+
+    <!-- Экран Journey -->
+    <div id="journey-screen" class="screen hidden centered">
+        <h2>Journey</h2>
+        <div class="gallery">
+            <img src="photo1.jpg" alt="Photo 1">
+            <img src="photo2.jpg" alt="Photo 2">
+            <img src="photo3.jpg" alt="Photo 3">
+            <img src="photo4.jpg" alt="Photo 4">
+            <img src="photo5.jpg" alt="Photo 5">
+            <img src="photo6.jpg" alt="Photo 6">
+        </div>
+        <button class="back-button" onclick="goToScreen('menu-screen')">&larr; Back</button>
+    </div>
+
+    <!-- Экран Moment -->
+    <div id="moment-screen" class="screen hidden centered">
+        <h2>Moment</h2>
+        <p>Time since our date:</p>
+        <p id="timer">Loading...</p>
+        <button class="back-button" onclick="goToScreen('menu-screen')">&larr; Back</button>
+    </div>
+
+    <!-- Экран Message -->
+    <div id="message-screen" class="screen hidden centered">
+        <h2>Message</h2>
+        <div class="message-container">
+            <p>Жаным жаным! 🥰🥰<br>Очень сильно тебя люблю! 😚♥️<br>
+            Рада, что все у нас идет хорошо, и не успеем оглянуться, как будем праздновать наши полгода, а там и годик не за горами) 😛💪<br>
+            Все эти наши ссоры, недопонимания сделают наши отношения крепче, но по крайней мере я смотрю на это с таким взглядом. Ведь не бывает ничего идеального в этом мире, кроме тебя конечно) Поэтому все это во благо! Во благо нам! Все будет Кудай каласа у нас, все что мы задумывали.😋😋♥️<br>
+            Сладуся моя вкусная, поздравляю тебя с нашей датой. Люблю тебя, и ценю сильно-сильно, до бесконечности!!!♥️♥️♥️🥰🥰🥰🥰🥰</p>
+        </div>
+        <button class="back-button" onclick="goToScreen('menu-screen')">&larr; Back</button>
+    </div>
+
+    <!-- Экран Playlist -->
+    <div id="playlist-screen" class="screen hidden centered">
+        <h2>Playlist</h2>
+        <div class="polaroid-player">
+            <img src="cover.jpg" alt="Cover Image" class="cover-image">
+            <div class="audio-controls">
+                <button class="control-button">⏮️</button>
+                <button class="control-button">⏯️</button>
+                <button class="control-button">⏭️</button>
+            </div>
+            <audio controls class="audio">
+                <source src="angel_miyagi.mp3" type="audio/mp3">
+                Ваш браузер не поддерживает аудиоэлемент.
+            </audio>
+        </div>
+        <button class="back-button" onclick="goToScreen('menu-screen')">&larr; Back</button>
+    </div>
+</body>
+</html>
