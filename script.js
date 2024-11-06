@@ -1,11 +1,12 @@
 // Функция перехода между экранами
 function goToScreen(screenId) {
+    // Скрываем все экраны, добавляя класс hidden
     document.querySelectorAll('.screen').forEach(screen => {
         screen.classList.add('hidden');
-        screen.classList.remove('active');
     });
+    
+    // Отображаем выбранный экран, удаляя класс hidden
     document.getElementById(screenId).classList.remove('hidden');
-    document.getElementById(screenId).classList.add('active');
 }
 
 // Таймер для отображения времени с даты
