@@ -1,6 +1,9 @@
 // Функция перехода между экранами
 function goToScreen(screenId) {
-    document.querySelectorAll('.screen').forEach(screen => screen.classList.add('hidden'));
+    document.querySelectorAll('.screen').forEach(screen => {
+        screen.classList.add('hidden');
+        screen.classList.remove('active');
+    });
     document.getElementById(screenId).classList.remove('hidden');
     document.getElementById(screenId).classList.add('active');
 }
